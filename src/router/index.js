@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import TestComponent from "../components/TestComponent";
+import auth from "../pages/auth/auth";
 Vue.use(Router)
 
 export default new Router({
@@ -12,10 +13,7 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld
     },
-    {
-      path: '/test',
-      name: 'TestComponent',
-      component: TestComponent
-    }
+    {path: '/test', name: 'TestComponent', component: TestComponent},
+    ...auth
   ]
 })
